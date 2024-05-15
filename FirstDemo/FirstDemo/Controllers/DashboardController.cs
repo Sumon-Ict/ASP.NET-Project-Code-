@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirstDemo.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FirstDemo.Controllers
 {
@@ -16,7 +17,11 @@ namespace FirstDemo.Controllers
         }
         public IActionResult Summary()
         {
-            return View();
+            var model=new SummaryModel("Hellow world","sumon","bogura",100);
+           
+
+            return View(model);
+
                 
         }
     }
