@@ -7,7 +7,28 @@
 }
 <p>@Model.Summarytext</p>
 
+@Html.TextBox(Model.Summarytext)
 
+<a asp-action="Summary" asp-controller="Dashboard" style="color:red">summary</a>
+
+
+<p>@Model.Name</p>
+<p>@Model.Address</p>
+<p>@Model.Amount</p>
+<h1>My name is sumon</h1>
+@Html.TextArea("hello world", Model.Address)
+@section Styles{
+    <style>
+        h1{color:yellow;text-align:center;}
+    </style>
+
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        alert("hello");
+        </script>
+}
 
 
 

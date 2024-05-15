@@ -1,5 +1,6 @@
 using FirstDemo.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,9 +43,32 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+       name: "areas",    
+       pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+       );
+
+    endpoints.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+   
+
+});
+
+
+
+
+/*
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"); */
+
+
 app.MapRazorPages();
 
 app.Run();
+
+
