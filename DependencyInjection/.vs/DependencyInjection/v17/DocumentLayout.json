@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|c:\\users\\sumon\\desktop\\project\\aspnet code\\asp.net-project-code-\\dependencyinjection\\dependencyinjection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|c:\\users\\sumon\\desktop\\project\\aspnet code\\asp.net-project-code-\\dependencyinjection\\dependencyinjection\\methodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\methodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|c:\\users\\sumon\\desktop\\project\\aspnet code\\asp.net-project-code-\\dependencyinjection\\dependencyinjection\\methoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\methoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|c:\\users\\sumon\\desktop\\project\\aspnet code\\asp.net-project-code-\\dependencyinjection\\dependencyinjection\\dependencyin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\dependencyin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|c:\\users\\sumon\\desktop\\project\\aspnet code\\asp.net-project-code-\\dependencyinjection\\dependencyinjection\\imathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B5ACFD0-F8FB-42CE-BCEE-702F9E7C674F}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\imathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyIn.cs",
+              "DocumentMoniker": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\DependencyIn.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\DependencyIn.cs",
+              "ToolTip": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\DependencyIn.cs",
+              "RelativeToolTip": "DependencyInjection\\DependencyIn.cs",
+              "ViewState": "AQIAAAQAAAAAmJmZmRkYwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T06:29:06.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MethodB.cs",
+              "DocumentMoniker": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\MethodB.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\MethodB.cs",
+              "ToolTip": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\MethodB.cs",
+              "RelativeToolTip": "DependencyInjection\\MethodB.cs",
+              "ViewState": "AQIAAAUAAACYzMzMzMwnwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T06:27:00.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MethodA.cs",
+              "DocumentMoniker": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\MethodA.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\MethodA.cs",
+              "ToolTip": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\MethodA.cs",
+              "RelativeToolTip": "DependencyInjection\\MethodA.cs",
+              "ViewState": "AQIAAAgAAACAZmZmZmYUwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T06:08:06.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMathService.cs",
+              "DocumentMoniker": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\IMathService.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\IMathService.cs",
+              "ToolTip": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\IMathService.cs",
+              "RelativeToolTip": "DependencyInjection\\IMathService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T06:06:08.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\Program.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\Program.cs",
+              "ToolTip": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\DependencyInjection\\DependencyInjection\\Program.cs",
+              "RelativeToolTip": "DependencyInjection\\Program.cs",
+              "ViewState": "AQIAAAIAAADQMjMzMzMrwAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T05:55:38.129Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
