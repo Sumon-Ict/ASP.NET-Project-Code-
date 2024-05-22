@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "U3I6FHc5ngfzKelTLyfBckfad7djqpBrKMr40SSgAY/xaXnA37RYZnIvDWmWJYAhcvtdutqAS9BEhWktREWQow==",
+  "dgSpecHash": "cmzbkNi14WadnBRjVOyeKEY0BOIC5p2GC8yAq52kup2yYFL6Ug2wXoN27EQ/iuV5zUwqygPm5DrwnZfW6/UpwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sumon\\Desktop\\Project\\ASPNET Code\\ASP.NET-Project-Code-\\CRUD\\CRUD\\CRUD.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sumon\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
+    "C:\\Users\\sumon\\.nuget\\packages\\autofac.extensions.dependencyinjection\\9.0.0\\autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -150,7 +152,7 @@
     "C:\\Users\\sumon\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
-    "C:\\Users\\sumon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\sumon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\system.formats.asn1\\6.0.0\\system.formats.asn1.6.0.0.nupkg.sha512",
     "C:\\Users\\sumon\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",

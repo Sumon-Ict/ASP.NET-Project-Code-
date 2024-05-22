@@ -19,6 +19,7 @@ namespace CRUD.Controllers
         }
         public IActionResult Create()
         {
+            
             return View();
         }
 

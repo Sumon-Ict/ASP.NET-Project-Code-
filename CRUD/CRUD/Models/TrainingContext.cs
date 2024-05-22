@@ -9,9 +9,7 @@ namespace CRUD.Models
 
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Employee> Employees { get; set; }
-
-
-
+        public DbSet<Course> Courses { get; set; }
         
 
     }

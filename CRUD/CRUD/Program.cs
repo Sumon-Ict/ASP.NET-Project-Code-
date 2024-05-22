@@ -1,3 +1,5 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using CRUD.Data;
 using CRUD.Models;
 using Microsoft.AspNetCore.Identity;
@@ -9,8 +11,20 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 //?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
+
+
+
 builder.Services.AddDbContext<TrainingContext>(options =>
 options.UseSqlServer(connectionString));
+
+
+
+builder.Host
+    .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>((container) =>
+    {
+        container.RegisterType<TrainingDbContext>().InstancePerLifetimeScope();
+    });
 
 builder.Services.AddDbContext<TrainingDbContext>(options =>
 options.UseSqlServer(connectionString));
@@ -49,10 +63,18 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+#pragma warning disable
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{Id?}"
+  );
 
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Dashboard}/{action=Summary}/{id?}");
+    endpoints.MapRazorPages();
+});
 app.Run();

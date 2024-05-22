@@ -273,3 +273,5 @@ C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\D
 C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\Debug\net8.0\Autofac.dll
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
