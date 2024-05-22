@@ -1,0 +1,13 @@
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\bin\Debug\net8.0\DemoProject.Data.deps.json
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\bin\Debug\net8.0\DemoProject.Data.dll
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\bin\Debug\net8.0\DemoProject.Data.pdb
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.csproj.AssemblyReference.cache
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.AssemblyInfoInputs.cache
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.AssemblyInfo.cs
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.csproj.CoreCompileInputs.cache
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.sourcelink.json
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.dll
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\refint\DemoProject.Data.dll
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\DemoProject.Data.pdb
+C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\DemoProject\DemoProject.Data\obj\Debug\net8.0\ref\DemoProject.Data.dll
