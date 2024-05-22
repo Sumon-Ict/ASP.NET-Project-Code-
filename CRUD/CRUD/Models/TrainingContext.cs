@@ -8,6 +8,10 @@ namespace CRUD.Models
 
 
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
+
+
         
 
     }
