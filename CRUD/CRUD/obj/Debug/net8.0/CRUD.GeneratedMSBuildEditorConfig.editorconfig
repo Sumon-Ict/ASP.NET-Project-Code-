@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sumon\Desktop\Project\ASPNET Code\ASP.NET-Project-Code-\CRUD\CRUD
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sumon/Desktop/Project/ASPNET Code/ASP.NET-Project-Code-/CRUD/CRUD/Areas/Admin/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sumon/Desktop/Project/ASPNET Code/ASP.NET-Project-Code-/CRUD/CRUD/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
