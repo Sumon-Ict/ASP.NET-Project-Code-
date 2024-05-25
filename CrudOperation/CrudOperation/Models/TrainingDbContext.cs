@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CrudOperation.Models.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudOperation.Models
 {
@@ -7,6 +8,10 @@ namespace CrudOperation.Models
         public TrainingDbContext(DbContextOptions<TrainingDbContext>options) :  base(options) { }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+
+
+
 
     }
 }
