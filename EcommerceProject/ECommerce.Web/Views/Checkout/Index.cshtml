@@ -1,0 +1,208 @@
+﻿@model CheckoutModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <h1 class="page-name">Checkout</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="active">checkout</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="page-wrapper">
+    <div class="checkout shopping">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="block billing-details">
+                        <h4 class="widget-title">Billing Details</h4>
+                        <form class="checkout-form">
+                            <div class="form-group">
+                                <label asp-for="User.Name">Full Name</label>
+                                <input asp-for="User.Name" class="form-control" placeholder="Name" readonly>
+                            </div>
+                            <div class="checkout-country-code clearfix">
+                                <div class="form-group">
+                                    <label asp-for="User.Email"></label>
+                                    <input asp-for="User.Email" class="form-control" placeholder="Email" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="User.Phone"></label>
+                                    <input asp-for="User.Phone" class="form-control" placeholder="Phone" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="User.Address"></label>
+                                <input asp-for="User.Address" class="form-control" placeholder="Address" readonly>
+                            </div>
+                            <span class="text-info">To change any detail, please visit <a asp-controller="Profile" asp-action="Details"><u>profile</u></a> page</span>
+                        </form>
+                    </div>
+
+                    <div class="block">
+                        <h4 class="widget-title">Payment Method</h4>
+                        <p>Please selece your preferable payment method</p>
+                        <div class="checkout-product-details">
+                            <div class="payment">
+                                <div class="card-details">
+                                    <div class="checkout-form">
+                                        <select class="form-control" asp-for="PaymentMethod" asp-items="@ViewBag.PaymentMethods" required>
+                                            <option value="0">--Select Payment Method--</option>
+                                        </select>
+                                        <a onclick="return checkPaymentMethod(this)" class="btn btn-main mt-20">Place Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-checkout-details">
+                        <div class="block">
+                            <h4 class="widget-title">Order Summary</h4>
+                            <div id="checkout-product-list" class="styled-scrollbar" style="max-height: 300px; overflow-y: scroll;">
+                            </div>
+                            @*<div class="discount-code">
+                            <p>Have a discount ? <a data-toggle="modal" data-target="#coupon-modal" href="#!">enter it here</a></p>
+                            </div>*@
+                            <div class="summary-prices"></div>
+                            <ul class="summary-prices">
+                                <li>
+                                    <span>Subtotal:</span>
+                                    <span class="price" id="subtotalPrice"></span>
+                                </li>
+                                <li>
+                                    <span>Shipping:</span>
+                                    <span>Free</span>
+                                </li>
+                            </ul>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span id="totalPrice"></span>
+                            </div>
+                            <div class="verified-icon">
+                                <img src="~/avito/images/shop/verified.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Enter Coupon Code">
+                    </div>
+                    <button type="submit" class="btn btn-main">Apply Coupon</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles{
+    <link href="~/lib/sweetalert2/css/sweetalert2.min.css" rel="stylesheet" />
+}
+
+@section Scripts{
+    <script src="~/lib/sweetalert2/js/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            populateCheckoutProductList()
+        });
+
+        window.addEventListener("focus", function () {
+            populateCheckoutProductList();
+        });
+
+        // Populate checkout product list
+        function populateCheckoutProductList() {
+            $("#checkout-product-list").empty();
+            var html = "";
+            var total = 0;
+
+            getProductJsonData(function (result) {
+                $.each(result, function (index, value) {
+                    total += value.price;
+                    html += '<div class="media product-card">' +
+                        '<a class="pull-left" href="/Shop/ViewProduct/' + value.id + '">' +
+                        '<img class="media-object object-cover" style="width:70px; height: 100px;" src="' + value.imageUrl + '" alt="' + value.name + '"  />' +
+                        '</a>' +
+                        '<div class="media-body">' +
+                        '<h4 class="media-heading">' +
+                        '<a href="/Shop/ViewProduct/' + value.id + '">' + value.name + ' </a>' +
+                        '</h4>' +
+                        '<p class="price cart-item-price">$' + value.price + '</p>' +
+                        '<button type="button" value="' + value.id + '" onclick = "deleteProduct(this)" class="remove btn btn-danger btn-sm pull-right" style="margin-right: 5px;"> Remove</button>' +
+                        '</div>' +
+                        '</div>'
+                });
+                $("#checkout-product-list").append($.parseHTML(html));
+                calculateTotalPrice();
+            });
+
+
+        }
+
+        // Delete a product from cart list
+        function deleteProduct(productId) {
+            removeThisProductFromCart(productId.value);
+            var row = productId.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            calculateTotalPrice();
+        }
+
+        // Calculate products total price
+        function calculateTotalPrice() {
+            let total = 0;
+            Array.from(document.getElementsByClassName("cart-item-price")).forEach(function (element) {
+                total += Number(element.innerHTML.slice(1));
+            });
+            document.getElementById('totalPrice').innerText = '$' + total + '.0';
+            document.getElementById('subtotalPrice').innerText = '$' + total + '.0';
+
+        }
+
+        // Check payment method value is populated or not
+        function checkPaymentMethod(button) {
+            var totalPrice =parseInt(document.getElementById('totalPrice').innerText.slice(1));
+            if (totalPrice == 0) {
+                Swal.fire({
+                    title: '<strong>Error</strong>',
+                    icon: 'error',
+                    html: '<strong>Can\'t create empty order.</strong>',
+                });
+                return false;
+            }
+            if ($('#PaymentMethod').val() == 0) {
+                Swal.fire({
+                    title: '<strong>Error</strong>',
+                    icon: 'error',
+                    html: '<strong>Please select a payment method.</strong>',
+                });
+                return false;
+            }
+            $(button).attr("href", window.location.origin + "/Checkout/ConfirmOrder?option=" + $('#PaymentMethod').val());
+            return true;
+        }
+    </script>
+}

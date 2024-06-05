@@ -1,0 +1,69 @@
+﻿@model HomeProductsListModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="Partials/_AvitoSliderPartial" />
+<partial name="Partials/_AvitoCategoryPartial" />
+
+<section class="products section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="title text-center">
+                <h2>Latest Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var product in Model.LatestProducts)
+            {
+                <div class="col-md-3">
+                    @{
+                        await Html.RenderPartialAsync("Partials/Products/_ProductThumbnailPartial", product);
+                    }
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="title text-center">
+                <h2>Popular Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var product in Model.PopularProducts)
+            {
+                <div class="col-md-3">
+                    @{
+                        await Html.RenderPartialAsync("Partials/Products/_ProductThumbnailPartial", product);
+                    }
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="title text-center">
+                <h2>Trendy Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var product in Model.TrendingProducts)
+            {
+                <div class="col-md-3">
+                    @{
+                        await Html.RenderPartialAsync("Partials/Products/_ProductThumbnailPartial", product);
+                    }
+                </div>
+            }
+        </div>
+        <div class="row">
+            <partial name="Partials/Products/_ProductPopupModal" />
+        </div>
+    </div>
+</section>
+
+<partial name="Partials/_AvitoCTAPartial" />
+@section Styles{
+    <link href="~/lib/sweetalert2/css/sweetalert2.min.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/lib/sweetalert2/js/sweetalert2.all.min.js"></script>
+    <script src="~/avito/js/productpopupmodalpopulate.js"></script>
+}

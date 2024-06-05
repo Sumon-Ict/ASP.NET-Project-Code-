@@ -1,0 +1,119 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!-- Start Top Header Bar -->
+<section class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-4">
+                <div class="contact-number">
+                    <i class="tf-ion-ios-telephone"></i>
+                    <span>0129- 12323-123123</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-4">
+                <!-- Site Logo -->
+                <div class="logo text-center">
+                    <a asp-controller="Home" asp-action="Index">
+                        <!-- replace logo here -->
+                        <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40"
+                               font-family="AustinBold, Austin" font-weight="bold">
+                                <g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
+                                    <text id="AVIATO">
+                                        <tspan x="108.94" y="325">AVIATO</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-4">
+                <!-- Cart -->
+                <ul class="top-menu text-right list-inline">
+                    <li class="dropdown cart-nav dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" onmouseover="populateCartDropDown()">
+                            <i class="tf-ion-android-cart"></i>Cart(<span id="cartProductCount">0</span>)
+                        </a>
+                        <div class="dropdown-menu cart-dropdown">
+                            <div id="cart-dropdown" class="styled-scrollbar" style="max-height: 300px; overflow-y: scroll;">
+                            </div>
+                            <div class="cart-summary">
+                                <span>Total</span>
+                                <span class="total-price" id="cart-total-price"></span>
+                            </div>
+                            <ul class="text-center cart-buttons">
+                                <li>
+                                    <a asp-controller="Cart" asp-action="Index" class="btn btn-small">View Cart</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Checkout" asp-action="Index" class="btn btn-small btn-solid-border">Checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li><!-- / Cart -->
+                    <!-- Search -->
+                    <li class="dropdown search dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                            <i class="tf-ion-ios-search-strong"></i> Search
+                        </a>
+                        <ul class="dropdown-menu search-dropdown">
+                            <li>
+                                <form action="post">
+                                    <input type="search" class="form-control" placeholder="Search...">
+                                </form>
+                            </li>
+                        </ul>
+                    </li><!-- / Search -->
+                    <!-- Languages -->
+                    <!--
+                    <li class="commonSelect">
+                        <select class="form-control">
+                            <option>EN</option>
+                            <option>DE</option>
+                            <option>FR</option>
+                            <option>ES</option>
+                        </select>
+                    </li>
+                    -->
+                    <!-- / Languages -->
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <li class="dropdown cart-nav dropdown-slide">
+                            <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                Profile
+                            </a>
+                            <div class="dropdown-menu cart-dropdown">
+                                <div>
+                                    <a asp-controller="Profile" asp-action="Index" class="btn btn-primary pull-right">View Profile</a>
+                                </div>
+                                @if (User.IsInRole("SuperAdmin"))
+                                {
+                                    <div>
+                                        <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" style="margin-top: 5px;" class="btn btn-info pull-right">Admin Panel</a>
+                                    </div>
+                                }
+                                <form method="post" asp-controller="Account" asp-action="SignOut">
+                                    <button type="submit" class="btn btn-danger pull-right" style="margin-top: 5px;">SignOut</button>
+                                </form>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a asp-controller="Account" asp-action="SignIn" class="d-block" style="margin-left: 10px;">
+                                SignIn
+                            </a>
+                        </li>
+                    }
+
+                </ul><!-- / .nav .navbar-nav .navbar-right -->
+            </div>
+        </div>
+    </div>
+</section><!-- End Top Header Bar -->

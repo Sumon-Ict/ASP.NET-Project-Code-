@@ -1,0 +1,105 @@
+﻿@model ProfileOrdersListModel
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <h1 class="page-name">Orders</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="active">Profile</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="user-dashboard page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline dashboard-menu text-center">
+                    <li>
+                        <a asp-controller="Profile" asp-action="Index">Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="active" asp-controller="Profile" asp-action="Orders">Orders</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Profile" asp-action="Details">Profile Details</a>
+                    </li>
+                </ul>
+                <div class="dashboard-wrapper user-dashboard">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total Price</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    foreach (var order in Model.Orders)
+                                    {
+                                        <tr>
+                                            <td>#@order.Id</td>
+                                            <td>@order.OrderDate.ToLocalTime()</td>
+                                            <td>@order.OrderDetails.Count()</td>
+                                            <td>$@order.TotalCost</td>
+                                            @if(order.OrderStatus == (int)OrderStatus.Processing)
+                                            {
+                                                <td>
+                                                    <span class="label label-info">@order.OrderStatusInWord</span>
+                                                </td>
+                                            }
+                                            else if (order.OrderStatus == (int)OrderStatus.Shipping)
+                                            {
+                                                <td>
+                                                    <span class="label label-primary">@order.OrderStatusInWord</span>
+                                                </td>
+                                            }
+                                            else if (order.OrderStatus == (int)OrderStatus.Completed)
+                                            {
+                                                <td>
+                                                    <span class="label label-success">@order.OrderStatusInWord</span>
+                                                </td>
+                                            }
+                                            else if (order.OrderStatus == (int)OrderStatus.Declined)
+                                            {
+                                                <td>
+                                                    <span class="label label-danger">@order.OrderStatusInWord</span>
+                                                </td>
+                                            }
+                                            else if (order.OrderStatus == (int)OrderStatus.Canceled)
+                                            {
+                                                <td>
+                                                    <span class="label label-warning">@order.OrderStatusInWord</span>
+                                                </td>
+                                            }
+
+                                            <td>
+                                                <a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="btn btn-default">View</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

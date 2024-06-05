@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"] - ECommerce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="aviato" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/avito/images/favicon.png" />
+
+    <!-- Themefisher Icon font -->
+    <link href="~/avito/plugins/themefisher-font/style.css" rel="stylesheet" />
+    <!-- bootstrap.min css -->
+    <link href="~/avito/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animate css -->
+    <link href="~/avito/plugins/animate/animate.css" rel="stylesheet" />
+    <!-- Slick Carousel -->
+    <link href="~/avito/plugins/slick/slick.css" rel="stylesheet" />
+    <link href="~/avito/plugins/slick/slick-theme.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link href="~/avito/css/style.css" rel="stylesheet" />
+
+    @await RenderSectionAsync("Styles", required: false)
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body id="body">
+
+    @RenderBody()
+
+    <!-- Main jQuery -->
+    <script src="~/avito/plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="~/avito/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="~/avito/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Instagram Feed Js -->
+    <script src="~/avito/plugins/instafeed/instafeed.min.js"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="~/avito/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Count Down Js -->
+    <script src="~/avito/plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+    <!-- slick Carousel -->
+    <script src="~/avito/plugins/slick/slick.min.js"></script>
+    <script src="~/avito/plugins/slick/slick-animation.min.js"></script>
+
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script src="~/avito/plugins/google-map/gmap.js"></script>
+
+    <!-- Main Js File -->
+    <script src="~/avito/js/script.js"></script>
+
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
